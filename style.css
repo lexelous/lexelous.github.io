@@ -1,6 +1,21 @@
-body {
-  font-family: Tahoma, sans-serif;
-  max-width: 700px;
-  margin: 40px auto;
-  padding: 0 16px;
-}
+:root{--bg:#14121f;--card:#1f1b33;--text:#e8e6f2;--muted:#9b97b8;--accent:#ffcc4d;--line:#3a3560}
+@media (prefers-color-scheme:light){:root{--bg:#f5f2e9;--card:#fff;--text:#201c33;--muted:#6a6585;--accent:#c2410c;--line:#d8d2c0}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.7 system-ui,Tahoma,sans-serif}
+.wrap{max-width:760px;margin:0 auto;padding:24px 16px 64px}
+nav{display:flex;gap:16px;flex-wrap:wrap;padding:16px 0;border-bottom:2px dashed var(--line);margin-bottom:32px}
+nav a{color:var(--muted);text-decoration:none}
+nav a:hover,nav a.on{color:var(--accent)}
+h1,h2{font-family:"Press Start 2P",monospace;line-height:1.5;letter-spacing:0}
+h1{font-size:22px;color:var(--accent)}
+h2{font-size:14px;margin-top:48px;color:var(--accent)}
+.sub{color:var(--muted);margin-top:-8px}
+.card{background:var(--card);border:2px solid var(--line);padding:16px;margin:16px 0}
+.card h3{margin:0 0 4px}
+.date{color:var(--muted);font-size:14px}
+.tags span{display:inline-block;border:1px solid var(--line);padding:0 8px;margin:4px 4px 0 0;font-size:13px;color:var(--muted)}
+.timeline{border-left:3px solid var(--accent);padding-left:20px;margin-left:6px}
+.timeline .item{margin-bottom:24px;position:relative}
+.timeline .item::before{content:"";position:absolute;left:-29px;top:6px;width:11px;height:11px;background:var(--accent)}
+a{color:var(--accent)}
+footer{margin-top:64px;color:var(--muted);font-size:14px}
